@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Maram Diensten
 
-## Getting Started
+Professionele website voor Maram Diensten - Snelle & Betrouwbare Koeriersdiensten in Nederland.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- TailwindCSS 4
+- Jest & React Testing Library
+
+## Aan de slag
+
+### Vereisten
+
+- Node.js 18+ (LTS aanbevolen)
+- npm
+
+### Installatie
 
 ```bash
+# Installeer dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in je browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Productie build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Maak productie build
+npm run build
 
-## Learn More
+# Start productie server
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Tests draaien
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Draai alle tests
+npm test
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Draai tests in watch mode
+npm run test:watch
+```
 
-## Deploy on Vercel
+## Projectstructuur
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+maram-diensten/
+├── app/
+│   ├── layout.tsx          # Root layout met SEO & structured data
+│   ├── page.tsx             # Homepage (single-page)
+│   ├── contact/
+│   │   ├── page.tsx         # Contactpagina
+│   │   └── actions.ts       # Server Actions voor formulier
+│   ├── privacy/page.tsx     # Privacybeleid
+│   └── voorwaarden/page.tsx # Algemene voorwaarden
+├── components/
+│   ├── Header.tsx           # Navigatie met scroll-functionaliteit
+│   ├── Hero.tsx             # Hero sectie
+│   ├── Services.tsx         # Diensten overzicht
+│   ├── WhyUs.tsx            # Waarom Maram Diensten
+│   ├── Workflow.tsx         # Werkwijze stappen
+│   ├── Reviews.tsx          # Klantreviews
+│   ├── CTASection.tsx       # Call-to-action sectie
+│   ├── Footer.tsx           # Footer met contactinfo
+│   └── ContactForm.tsx      # Contactformulier component
+├── tests/unit/              # Unit tests
+├── public/images/           # Afbeeldingen
+└── styles/                  # CSS bestanden
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features
+
+- Single-page homepage met smooth scroll navigatie
+- Responsive mobile-first design
+- SEO geoptimaliseerd met meta tags en structured data (LocalBusiness)
+- Contactformulier met Server Actions
+- Juridisch correcte privacy- en voorwaardenpagina's
+- WCAG AA toegankelijkheid
+
+## Deployment
+
+Deze website is geoptimaliseerd voor Vercel:
+
+```bash
+# Installeer Vercel CLI
+npm i -g vercel
+
+# Deploy naar Vercel
+vercel
+```
+
+## Configuratie
+
+Pas de volgende gegevens aan in de code:
+- Telefoonnummer: zoek naar `+31612345678`
+- E-mail: zoek naar `info@maramdiensten.nl`
+- KvK & BTW nummer: in `Footer.tsx`
+- Website URL: in `layout.tsx` metadata
+
+## Licentie
+
+Alle rechten voorbehouden - Maram Diensten
